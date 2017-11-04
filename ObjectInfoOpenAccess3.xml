@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<xml><export version="9.39" build="3939" dbms="sqlserver" dbms_version="9.00.4035.00" export_date="2017-11-04 18:14:34"/><listview module_id="1" context_id="-1" showmediacount="0" view="vMKLVObjInfoOpenAccess3"><local_labels><local_label lang="ENGLISH" label="ObjectInfoOpenAccess 3"/><local_label lang="DUTCH" label="ObjectInfoOpenAccess 3"/><local_label lang="FRENCH" label="ObjectInfoOpenAccess 3"/><local_label lang="SPANISH" label="ObjectInfoOpenAccess 3"/><local_label lang="GERMAN" label="ObjectInfoOpenAccess 3"/><local_label lang="ITALIAN" label="ObjectInfoOpenAccess 3"/><local_label lang="SWEDISH" label="ObjectInfoOpenAccess 3"/><local_label lang="DANISH" label="ObjectInfoOpenAccess 3"/><local_label lang="UKENGLISH" label="ObjectInfoOpenAccess 3"/><local_label lang="RUSSIAN" label="ObjectInfoOpenAccess 3"/><local_label lang="TURKISH" label="ObjectInfoOpenAccess 3"/><local_label lang="THAI" label="ObjectInfoOpenAccess 3"/><local_label lang="HUNGARIAN" label="ObjectInfoOpenAccess 3"/><local_label lang="GREEK" label="ObjectInfoOpenAccess 3"/><local_label lang="NORWEGIAN" label="ObjectInfoOpenAccess 3"/><local_label lang="ARABIC" label="ObjectInfoOpenAccess 3"/><local_label lang="CHINESE_SIMPLIFIED" label="ObjectInfoOpenAccess 3"/><local_label lang="CHINESE_TRADITIONAL" label="ObjectInfoOpenAccess 3"/><local_label lang="HEBREW" label="ObjectInfoOpenAccess 3"/><local_label lang="PORTUGUESE_BRAZILIAN" label="ObjectInfoOpenAccess 3"/><local_label lang="CZECH" label="ObjectInfoOpenAccess 3"/></local_labels><columns><column num="1" name="id" order="1" width="1000" align="1" datatype="1" hier_id="3" column_id="1223" altheading="id"/><column num="2" name="accession_number" order="2" width="1500"/><column num="3" name="title" order="3" width="2400" hier_id="3" column_id="1237" altheading="title"/><column num="4" name="maker" order="4" width="2400"/><column num="5" name="department" order="5" width="1500" hier_id="36" column_id="538" altheading="department"/><column num="6" name="classification" order="6" width="1800" hier_id="68" column_id="79" altheading="classification"/><column num="7" name="culture" order="7" width="1800" hier_id="71" column_id="1122" altheading="culture"/><column num="8" name="period" order="8" width="1800" hier_id="71" column_id="1126" altheading="period"/><column num="9" name="creation_date" order="9" width="1800"/><column num="10" name="creation_date_earliest" order="10" width="1000" align="1" datatype="1"/><column num="11" name="creation_date_latest" order="11" width="1000" align="1" datatype="1"/><column num="12" name="source_name" order="12" width="1800"/><column num="13" name="object_name" order="13" width="1500"/><column num="14" name="medium" order="14" width="2400" hier_id="3" column_id="1238" altheading="medium"/><column num="15" name="dimensions" order="15" width="2400" hier_id="3" column_id="1239" altheading="dimensions"/><column num="16" name="description" order="16" width="2400" hier_id="3" column_id="1246" altheading="description"/><column num="17" name="credit_line" order="17" width="2400"/><column num="18" name="paper_support" order="18" width="1800"/><column num="19" name="catalogue_raisonne" order="19" width="1800"/><column num="20" name="portfolio" order="20" width="2400" hier_id="3" column_id="1253" altheading="portfolio"/><column num="21" name="signed" order="21" width="2400" hier_id="3" column_id="1240" altheading="signed"/><column num="22" name="marks" order="22" width="2400"/><column num="23" name="inscriptions" order="23" width="2400"/><column num="24" name="filename" order="24" hidden="1" width="2400" hier_id="1767" column_id="2842"/><column num="25" name="filename2" order="25" width="2400" altheading="filename"/></columns><scripts dbms="sqlserver" version="9.00.4035.00"><script num="1" name="vListViewClassifications" type="view">
+
+CREATE View vListViewClassifications As
+
+Select CL.ClassificationID, Case 
+                                 When CL.SubClassification Is Null Or CL.SubClassification = '' Then CL.Classification
+                                 When CL.SubClassification2 Is Null Or CL.SubClassification2 = '' Then CL.Classification + N'-' + CL.SubClassification
+                                 When CL.SubClassification3 Is Null Or CL.SubClassification3 = '' Then CL.Classification + N'-' + CL.SubClassification + N'-' + CL.SubClassification2
+                                 Else CL.Classification + N'-' + CL.SubClassification + N'-' + CL.SubClassification2 + N'-' + CL.SubClassification3
+                            End Classification
+From   Classifications CL
+
+
+</script><script num="2" name="vListViewObjectsLongText" type="view">
+Create View vListViewObjectsLongText As
+Select O.ObjectID  ID, O.ObjectNumber, O.SortNumber, D.Mnemonic, CL.Classification, OC.Culture, OC.Period,
+        ConAltNames.DisplayName, ConAltNames.AlphaSort, SUBSTRING(CXS.ForwardDisplay,1,255) Attribution, SUBSTRING(CXS.InvertedDisplay,1,255) AttributionSort,
+        O.ObjectName, OT.Title, O.Dated, O.DateBegin, O.Medium, O.Dimensions, O.Description, O.CreditLine
+From Objects O
+        Inner Join Departments D On O.DepartmentID = D.DepartmentID
+        Inner Join vListViewClassifications CL On O.ClassificationID = CL.ClassificationID
+        Inner Join ObjContext OC On O.ObjectID = OC.ObjectID
+        Left Join ObjTitles OT On O.ObjectID = OT.ObjectID AND OT.DisplayOrder = 1 AND OT.Displayed = 1
+        Left Join ConXrefSets CXS On O.ObjectID = CXS.ID AND CXS.TableID = 108 AND CXS.AttributeStatusID = 0
+        Left Join (ConXrefs
+            Inner Join Roles On ConXrefs.RoleID = Roles.RoleID
+            Inner Join ConXrefDetails On ConXrefs.ConXrefID = ConXrefDetails.ConXrefID AND ConXrefDetails.UnMasked = 1
+            Inner Join ConAltNames On ConXrefDetails.NameID = ConAltNames.AltNameID)
+        On O.ObjectID = ConXrefs.ID AND ConXrefs.RoleTypeID = 1 AND ConXrefs.TableID = 108 AND ConXrefs.DisplayOrder = 1 AND ConXrefs.Displayed = 1
+
+</script><script num="3" name="vMKLVObjInfoOpenAccess3" type="view">CREATE VIEW [dbo].[vMKLVObjInfoOpenAccess3] AS
+
+ SELECT a.ID AS id,
+    a.ObjectNumber AS accession_number,
+    a.Title AS title,
+    a.DisplayName    AS maker,
+    c.Department AS department,
+    a.Classification AS classification,
+    a.Culture AS culture,
+    a.Period AS period,
+    a.Dated AS creation_date,
+    a.DateBegin AS creation_date_earliest,
+    b.DateEnd AS creation_date_latest,
+    (SELECT ConfigValue
+    FROM Configuration
+    WHERE ConfigLabel = 'system.institution'
+    ) AS source_name,
+    a.ObjectName AS object_name,
+    a.Medium AS medium,
+    a.Dimensions AS dimensions,
+    a.Description AS description,
+    a.CreditLine AS credit_line,
+    b.PaperSupport AS paper_support,
+    b.Catrais AS catalogue_raisonne,
+    b.Portfolio AS portfolio,
+    b.Signed AS signed,
+    b.markings  AS marks,
+    b.Inscribed AS inscriptions,
+    mf.filename,
+
+    -- strip off path text by reversing the filename field and then looking for a back slash or forward slash. 
+    -- The fileame itslef will now be on the left and can be pulled off with a left() function.
+    -- Once the reversed filname is pulled off it must be reversed again to get back to the correct order.
+
+    (select case 
+      when charindex('\',MF.[FileName]) &gt; 0 
+        then Replace(REVERSE(LEFT(REVERSE(mf.filename),CHARINDEX('\',REVERSE(mf.filename)))),'\','')
+      when charindex('/',MF.[FileName]) &gt; 0 
+        then Replace(REVERSE(LEFT(REVERSE(mf.filename),CHARINDEX('/',REVERSE(mf.filename)))),'/','')
+      else MF.[FileName]
+    end) as filename2
+    
+  FROM vlistviewobjectsLongText a -- TMS delivered view of object info
+  INNER JOIN objects b
+  ON a.id=b.objectid  
+  INNER JOIN departments c
+  ON b.departmentid=c.departmentid
+  LEFT OUTER JOIN MediaXrefs MX -- media related tables store the associated image filename
+  ON b.ObjectID = MX.ID and TableID = 108 and PrimaryDisplay= 1
+  LEFT OUTER JOIN MediaMaster MM on MX.MediaMasterID = MM.MediaMasterID
+  LEFT OUTER JOIN MediaRenditions MR on MM.PrimaryRendID = MR.RenditionID
+  LEFT OUTER JOIN MediaFiles MF on MR.PrimaryFileID = MF.FileID</script></scripts></listview></xml>
