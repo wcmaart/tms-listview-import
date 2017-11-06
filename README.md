@@ -2,7 +2,7 @@
 
 This is the profile that the Williams College Museum of Art uses to export collection data from TMS.
 
-TMS ships with a helper application called List View Designer. List View Designer allows you to create and format views for List Views in TMS. List Views in TMS allow you to export structured data without using just the TMS client; you don't need access to the backend database. This means that people who are not developers or database experts can export open-access csv files from TMS.
+TMS ships with a helper application called List View Designer. List View Designer allows you to create and format views for List Views in TMS. List Views in TMS allow you to export structured data using just the frontend TMS client; you don't need access to the backend database. This means that people who are not developers or database experts can export open-access csv files from TMS.
 
 To use: 
 - Download this xml file.
