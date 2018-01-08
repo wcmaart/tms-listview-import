@@ -1,5 +1,83 @@
 <?xml version="1.0"?>
-<xml><export version="9.39" build="3939" dbms="sqlserver" dbms_version="9.00.4035.00" export_date="2017-11-04 18:14:34"/><listview module_id="1" context_id="-1" showmediacount="0" view="vMKLVObjInfoOpenAccess3"><local_labels><local_label lang="ENGLISH" label="ObjectInfoOpenAccess 3"/><local_label lang="DUTCH" label="ObjectInfoOpenAccess 3"/><local_label lang="FRENCH" label="ObjectInfoOpenAccess 3"/><local_label lang="SPANISH" label="ObjectInfoOpenAccess 3"/><local_label lang="GERMAN" label="ObjectInfoOpenAccess 3"/><local_label lang="ITALIAN" label="ObjectInfoOpenAccess 3"/><local_label lang="SWEDISH" label="ObjectInfoOpenAccess 3"/><local_label lang="DANISH" label="ObjectInfoOpenAccess 3"/><local_label lang="UKENGLISH" label="ObjectInfoOpenAccess 3"/><local_label lang="RUSSIAN" label="ObjectInfoOpenAccess 3"/><local_label lang="TURKISH" label="ObjectInfoOpenAccess 3"/><local_label lang="THAI" label="ObjectInfoOpenAccess 3"/><local_label lang="HUNGARIAN" label="ObjectInfoOpenAccess 3"/><local_label lang="GREEK" label="ObjectInfoOpenAccess 3"/><local_label lang="NORWEGIAN" label="ObjectInfoOpenAccess 3"/><local_label lang="ARABIC" label="ObjectInfoOpenAccess 3"/><local_label lang="CHINESE_SIMPLIFIED" label="ObjectInfoOpenAccess 3"/><local_label lang="CHINESE_TRADITIONAL" label="ObjectInfoOpenAccess 3"/><local_label lang="HEBREW" label="ObjectInfoOpenAccess 3"/><local_label lang="PORTUGUESE_BRAZILIAN" label="ObjectInfoOpenAccess 3"/><local_label lang="CZECH" label="ObjectInfoOpenAccess 3"/></local_labels><columns><column num="1" name="id" order="1" width="1000" align="1" datatype="1" hier_id="3" column_id="1223" altheading="id"/><column num="2" name="accession_number" order="2" width="1500"/><column num="3" name="title" order="3" width="2400" hier_id="3" column_id="1237" altheading="title"/><column num="4" name="maker" order="4" width="2400"/><column num="5" name="department" order="5" width="1500" hier_id="36" column_id="538" altheading="department"/><column num="6" name="classification" order="6" width="1800" hier_id="68" column_id="79" altheading="classification"/><column num="7" name="culture" order="7" width="1800" hier_id="71" column_id="1122" altheading="culture"/><column num="8" name="period" order="8" width="1800" hier_id="71" column_id="1126" altheading="period"/><column num="9" name="creation_date" order="9" width="1800"/><column num="10" name="creation_date_earliest" order="10" width="1000" align="1" datatype="1"/><column num="11" name="creation_date_latest" order="11" width="1000" align="1" datatype="1"/><column num="12" name="source_name" order="12" width="1800"/><column num="13" name="object_name" order="13" width="1500"/><column num="14" name="medium" order="14" width="2400" hier_id="3" column_id="1238" altheading="medium"/><column num="15" name="dimensions" order="15" width="2400" hier_id="3" column_id="1239" altheading="dimensions"/><column num="16" name="description" order="16" width="2400" hier_id="3" column_id="1246" altheading="description"/><column num="17" name="credit_line" order="17" width="2400"/><column num="18" name="paper_support" order="18" width="1800"/><column num="19" name="catalogue_raisonne" order="19" width="1800"/><column num="20" name="portfolio" order="20" width="2400" hier_id="3" column_id="1253" altheading="portfolio"/><column num="21" name="signed" order="21" width="2400" hier_id="3" column_id="1240" altheading="signed"/><column num="22" name="marks" order="22" width="2400"/><column num="23" name="inscriptions" order="23" width="2400"/><column num="24" name="filename" order="24" hidden="1" width="2400" hier_id="1767" column_id="2842"/><column num="25" name="filename2" order="25" width="2400" altheading="filename"/></columns><scripts dbms="sqlserver" version="9.00.4035.00"><script num="1" name="vListViewClassifications" type="view">
+<xml><export installname="GENERIC" institution="Williams College Museum of Art" version="9.39" build="3939" dbms="sqlserver" dbms_version="9.00.4035.00" dbname="tms" export_date="2018-01-05 11:39:52"/><listview module_id="1" context_id="-1" showmediacount="0" view="vMKLVObjInfoOpenAccess4"><local_labels><local_label lang="ENGLISH" label="ObjectInfoOpenAccess 5"/><local_label lang="DUTCH" label="ObjectInfoOpenAccess 5"/><local_label lang="FRENCH" label="ObjectInfoOpenAccess 5"/><local_label lang="SPANISH" label="ObjectInfoOpenAccess 5"/><local_label lang="GERMAN" label="ObjectInfoOpenAccess 5"/><local_label lang="ITALIAN" label="ObjectInfoOpenAccess 5"/><local_label lang="SWEDISH" label="ObjectInfoOpenAccess 5"/><local_label lang="DANISH" label="ObjectInfoOpenAccess 5"/><local_label lang="UKENGLISH" label="ObjectInfoOpenAccess 5"/><local_label lang="RUSSIAN" label="ObjectInfoOpenAccess 5"/><local_label lang="TURKISH" label="ObjectInfoOpenAccess 5"/><local_label lang="THAI" label="ObjectInfoOpenAccess 5"/><local_label lang="HUNGARIAN" label="ObjectInfoOpenAccess 5"/><local_label lang="GREEK" label="ObjectInfoOpenAccess 5"/><local_label lang="NORWEGIAN" label="ObjectInfoOpenAccess 5"/><local_label lang="ARABIC" label="ObjectInfoOpenAccess 5"/><local_label lang="CHINESE_SIMPLIFIED" label="ObjectInfoOpenAccess 5"/><local_label lang="CHINESE_TRADITIONAL" label="ObjectInfoOpenAccess 5"/><local_label lang="HEBREW" label="ObjectInfoOpenAccess 5"/><local_label lang="PORTUGUESE_BRAZILIAN" label="ObjectInfoOpenAccess 5"/><local_label lang="CZECH" label="ObjectInfoOpenAccess 5"/></local_labels><columns><column num="1" name="id" order="1" width="1000" align="1" datatype="1" hier_id="3" column_id="1223" altheading="id"/><column num="2" name="accession_number" order="2" width="1500"/><column num="3" name="title" order="3" width="2400" hier_id="3" column_id="1237" altheading="title"/><column num="4" name="maker" order="4" width="2400"/><column num="5" name="ULAN" order="5" width="2400"/><column num="6" name="department" order="6" width="1500" hier_id="36" column_id="538" altheading="department"/><column num="7" name="classification" order="7" width="1800" hier_id="68" column_id="79" altheading="classification"/><column num="8" name="culture" order="8" width="1800" hier_id="71" column_id="1122" altheading="culture"/><column num="9" name="period" order="9" width="1800" hier_id="71" column_id="1126" altheading="period"/><column num="10" name="creation_date" order="10" width="1800"/><column num="11" name="creation_date_earliest" order="11" width="1000" align="1" datatype="1"/><column num="12" name="creation_date_latest" order="12" width="1000" align="1" datatype="1"/><column num="13" name="AccessionISODate" order="13" width="1500" hier_id="302" column_id="3309" altheading="accession_date"/><column num="14" name="source_name" order="14" width="1800"/><column num="15" name="object_name" order="15" width="1500"/><column num="16" name="medium" order="16" width="2400" hier_id="3" column_id="1238" altheading="medium"/><column num="17" name="dimensions" order="17" width="2400" hier_id="3" column_id="1239" altheading="dimensions"/><column num="18" name="description" order="18" width="2400" hier_id="3" column_id="1246" altheading="description"/><column num="19" name="credit_line" order="19" width="2400"/><column num="20" name="paper_support" order="20" width="1800"/><column num="21" name="catalogue_raisonne" order="21" width="1800"/><column num="22" name="portfolio" order="22" width="2400" hier_id="3" column_id="1253" altheading="portfolio"/><column num="23" name="signed" order="23" width="2400" hier_id="3" column_id="1240" altheading="signed"/><column num="24" name="marks" order="24" width="2400"/><column num="25" name="inscriptions" order="25" width="2400"/><column num="26" name="filename" order="26" width="2400" altheading="filename"/></columns><scripts dbms="sqlserver" version="9.00.4035.00"><script num="1" name="vDataViewThesXrefs" type="view">
+CREATE VIEW vDataViewThesXrefs AS
+SELECT TX.ThesXrefTableID, TX.TableID, TX.ID, TXT.ThesXrefType, T.Term, T.LanguageID, TM.CN, RTM.CN AS RootCN, 
+    TXT.ShowGuideTerms, TXT.BroadestTermFirst, TXT.NumLevels
+FROM ThesXrefs TX
+INNER JOIN ThesXrefTypes TXT ON TX.ThesXrefTypeID = TXT.ThesXrefTypeID
+INNER JOIN vDataViewThesTerms T ON TX.TermID = T.TermID
+INNER JOIN vDataViewThesTermMaster TM ON T.TermMasterID = TM.TermMasterID
+LEFT JOIN vDataViewThesTermMaster RTM ON TXT.TermMasterID = RTM.TermMasterID
+WHERE TX.Active = 1
+</script><script num="2" name="fnThesGeoTerms" type="function"></script><script num="3" name="fnThesAATTerms" type="function"></script><script num="4" name="vConXrefs_Classic" type="view">CREATE VIEW [dbo].[vConXrefs_Classic] AS
+
+		SELECT CX.ConXrefID, CX.ID, CXD.ConstituentID, CX.RoleID, CX.TableID, CXD.DateBegin, CXD.DateEnd, CXD.Remarks, CX.LoginID, CX.EnteredDate,
+
+		CXD.ConStatement, CX.DisplayOrder, CX.Displayed, CX.Active, CXD.Prefix, CXD.Suffix, CXD.Amount, CXD.DisplayDate, CX.RoleTypeID, CXD.AddressID, CXD.NameID
+
+		FROM ConXrefs CX INNER JOIN ConXrefDetails CXD on (CX.ConXrefID = CXD.ConXrefID And CXD.UnMasked = 1)
+</script><script num="5" name="CopyrightHolder" type="function"></script><script num="6" name="Usedby" type="function"></script><script num="7" name="PrintMaker" type="function"></script><script num="8" name="ArtistMakers" type="function"></script><script num="9" name="vgsrpObjTombstoneD_RO" type="view">
+Create View vgsrpObjTombstoneD_RO As
+Select Objects.ObjectID, Objects.ObjectNumber, Objects.SortNumber, Objects.PhysicalParentID,
+        (CASE WHEN Objects.PhysicalParentID IS NULL THEN Objects.ObjectID ELSE Objects.PhysicalParentID END) AS ParentID,
+        (CASE WHEN Objects.PhysicalParentID IS NULL THEN Objects.ObjectNumber ELSE ObjectParent.ObjectNumber END) AS ParentObjectNumber,
+        (CASE WHEN Objects.PhysicalParentID IS NULL THEN Objects.SortNumber ELSE ObjectParent.SortNumber END) AS ParentSortNumber,
+        Objects.DepartmentID, Objects.ObjectStatusID, Objects.ClassificationID, Objects.ObjectName, Objects.Dated,
+        Objects.DateBegin, Objects.DateEnd, Objects.DateRemarks, Objects.DateEffectiveISODate, Objects.Medium,
+        Objects.Dimensions, Objects.CreditLine, Objects.Description, ObjTitles.TitleID, ObjTitles.Title,
+        ObjTitles.Remarks AS TitleRemarks, ObjTitles.DateEffectiveISODate AS TitleEffectiveISODate, ConXrefSets.ConXrefSetID,
+        ConXrefSets.ForwardDisplay, ConXrefSets.InvertedDisplay, ConXrefSets.Remarks AS AttributionRemarks,
+        ConXrefSets.DateEffectiveISODate AS AttributionEffectiveISODate, ConXrefs.RoleID, Roles.Role, ConXrefDetails.NameID,
+        ConXrefDetails.ConstituentID, ConXrefDetails.Prefix, ConXrefDetails.Remarks, ConXrefDetails.ConStatement,
+        ConXrefDetails.Suffix, ConXrefDetails.Amount, ConAltNames.LastName, ConAltNames.FirstName, ConAltNames.NameTitle,
+        ConAltNames.Remarks AS AltNameRemarks, ConAltNames.MiddleName, ConAltNames.Suffix AS AltNameSuffix,
+        ConAltNames.CultureGroup, ConAltNames.Institution, ConAltNames.NameType, ConAltNames.DisplayName,
+        ConAltNames.Position, ConAltNames.salutation, ConAltNames.AlphaSort
+From Objects
+        Left Join Objects ObjectParent On Objects.PhysicalParentID = ObjectParent.ObjectID
+        Left Join ObjTitles On Objects.ObjectID = ObjTitles.ObjectID AND ObjTitles.DisplayOrder = 1 AND ObjTitles.Displayed = 1
+        Left Join ConXrefSets On Objects.ObjectID = ConXrefSets.ID AND ConXrefSets.TableID = 108 AND ConXrefSets.AttributeStatusID = 0
+        Left Join (ConXrefs
+            Inner Join Roles On ConXrefs.RoleID = Roles.RoleID
+            Inner Join ConXrefDetails On ConXrefs.ConXrefID = ConXrefDetails.ConXrefID AND ConXrefDetails.UnMasked = 1
+            Inner Join ConAltNames On ConXrefDetails.NameID = ConAltNames.AltNameID)
+        On Objects.ObjectID = ConXrefs.ID AND ConXrefs.RoleTypeID = 1 AND ConXrefs.TableID = 108 AND ConXrefs.DisplayOrder = 1 AND ConXrefs.Displayed = 1
+
+</script><script num="10" name="vgsrpObjContextS_RO" type="view">
+CREATE VIEW [dbo].[vgsrpObjContextS_RO] AS
+SELECT     ObjContextID, ObjectID, Culture, Style, Reign, Dynasty, Period, Movement, Nationality, LoginID, EnteredDate, School, ShortText1, 
+                      ShortText2, ShortText3, ShortText4, LongText1, LongText2, LongText3, LongText4, LongText5, LongText6, N_Name, N_Title, N_Description, N_Signed, 
+                      N_Markings, N_Inscription, N_Notes, N_CuratorRemarks, Flag1, Flag2, Flag3, Flag4, Flag5, Flag6, Flag7, Flag8, Flag9, Flag10, ISODate1, ISODate2, 
+                      ISODate3, ISODate4, ISODate5, ISODate6, ISODate7, ISODate8, ISODate9, ISODate10, Integer1, Integer2, Integer3, Integer4, Authority1ID, Authority2ID, 
+                      Authority3ID, Authority4ID, Flag11, Flag12, Flag13, Flag14, Flag15, Flag16, Flag17, Flag18, Flag19, Flag20, LongText7, LongText8, LongText9, 
+                      LongText10, ShortText5, ShortText6, ShortText7, ShortText8, ShortText9, ShortText10, Authority5ID, Authority6ID, Authority7ID, Authority8ID, 
+                      Authority9ID, Authority10ID, Authority11ID, Authority12ID, Authority13ID, Authority14ID, Authority15ID, Authority16ID, Authority17ID, Authority18ID, 
+                      Authority19ID, Authority20ID, Authority21ID, Authority22ID, Authority23ID, Authority24ID, Authority25ID, Authority26ID, Authority27ID, Authority28ID, 
+                      Authority29ID, Authority30ID, Authority31ID, Authority32ID, Authority33ID, Authority34ID, Authority35ID, Authority36ID, Authority37ID, Authority38ID, 
+                      Authority39ID, Authority40ID, Authority41ID, Authority42ID, Authority43ID, Authority44ID, Authority45ID, Authority46ID, Authority47ID, Authority48ID, 
+                      Authority49ID, Authority50ID, Authority51ID, Authority52ID, Authority53ID, Authority54ID, Authority55ID, Authority56ID, Authority57ID, Authority58ID, 
+                      Authority59ID, Authority60ID, Authority61ID, Authority62ID, Authority63ID, Authority64ID, Authority65ID, Authority66ID, Authority67ID, Authority68ID, 
+                      Authority69ID, Authority70ID, Authority71ID, Authority72ID, Authority73ID, Authority74ID, Authority75ID, Authority76ID, Authority77ID, Authority78ID, 
+                      Authority79ID, Authority80ID
+FROM         dbo.ObjContext
+</script><script num="11" name="vWCObjectInfoListView" type="view">CREATE View [dbo].[vWCObjectInfoListView]
+as
+Select O.ObjectID as ID, dbo.ArtistMakers(O.ObjectID, ',') as 'Artist/Maker/Made by', 
+dbo.PrintMaker(O.ObjectID, ',') as 'PrintMaker',
+dbo.Usedby (O.ObjectID, ',') as 'UsedBy',
+O.ObjectNumber, Culture, O.Title, O.Dated, Period,O.DateBegin as 'Date Begin', O.DateEnd as 'Date End', O.ObjectName, Substring(O.Medium, 1, 255) as Medium, 
+OB.PaperSupport as 'Paper/Support', Substring(O.Dimensions, 1, 255) as Dimensions, Substring(O.Description, 1, 255) as Description, 
+Department, 
+Substring(O.CreditLine, 1, 255) as CreditLine,
+dbo.fnThesAATTerms (O.ObjectID, ',') as 'AATSubject',
+dbo.fnThesGeoTerms (O.ObjectID, ',') as 'GEOSubjectRegion',
+dbo.CopyrightHolder(O.ObjectID, ',')as 'Copyright Holder'
+From vgsrpObjTombstoneD_RO O inner join vgsrpObjContextS_RO CT
+on O.ObjectID = CT.ObjectID
+left outer join ObjDates OD on O.ObjectID = OD.ObjectID
+inner join Objects OB on O.ObjectID = OB.ObjectID
+inner join Departments D on O.DepartmentID = D.DepartmentID
+</script><script num="12" name="wmsGetULAN" type="function"></script><script num="13" name="vListViewClassifications" type="view">
 
 CREATE View vListViewClassifications As
 
@@ -12,7 +90,7 @@ Select CL.ClassificationID, Case
 From   Classifications CL
 
 
-</script><script num="2" name="vListViewObjectsLongText" type="view">
+</script><script num="14" name="vListViewObjectsLongText" type="view">
 Create View vListViewObjectsLongText As
 Select O.ObjectID  ID, O.ObjectNumber, O.SortNumber, D.Mnemonic, CL.Classification, OC.Culture, OC.Period,
         ConAltNames.DisplayName, ConAltNames.AlphaSort, SUBSTRING(CXS.ForwardDisplay,1,255) Attribution, SUBSTRING(CXS.InvertedDisplay,1,255) AttributionSort,
@@ -29,12 +107,13 @@ From Objects O
             Inner Join ConAltNames On ConXrefDetails.NameID = ConAltNames.AltNameID)
         On O.ObjectID = ConXrefs.ID AND ConXrefs.RoleTypeID = 1 AND ConXrefs.TableID = 108 AND ConXrefs.DisplayOrder = 1 AND ConXrefs.Displayed = 1
 
-</script><script num="3" name="vMKLVObjInfoOpenAccess3" type="view">CREATE VIEW [dbo].[vMKLVObjInfoOpenAccess3] AS
+</script><script num="15" name="vMKLVObjInfoOpenAccess4" type="view">CREATE VIEW [dbo].[vMKLVObjInfoOpenAccess4] AS
 
  SELECT a.ID AS id,
     a.ObjectNumber AS accession_number,
     a.Title AS title,
     a.DisplayName    AS maker,
+    dbo.wmsGetULAN(a.id) as ULAN,
     c.Department AS department,
     a.Classification AS classification,
     a.Culture AS culture,
@@ -42,6 +121,7 @@ From Objects O
     a.Dated AS creation_date,
     a.DateBegin AS creation_date_earliest,
     b.DateEnd AS creation_date_latest,
+    d.AccessionISODate,
     (SELECT ConfigValue
     FROM Configuration
     WHERE ConfigLabel = 'system.institution'
@@ -57,7 +137,6 @@ From Objects O
     b.Signed AS signed,
     b.markings  AS marks,
     b.Inscribed AS inscriptions,
-    mf.filename,
 
     -- strip off path text by reversing the filename field and then looking for a back slash or forward slash. 
     -- The fileame itslef will now be on the left and can be pulled off with a left() function.
@@ -69,7 +148,7 @@ From Objects O
       when charindex('/',MF.[FileName]) &gt; 0 
         then Replace(REVERSE(LEFT(REVERSE(mf.filename),CHARINDEX('/',REVERSE(mf.filename)))),'/','')
       else MF.[FileName]
-    end) as filename2
+    end) as filename
     
   FROM vlistviewobjectsLongText a -- TMS delivered view of object info
   INNER JOIN objects b
@@ -80,4 +159,8 @@ From Objects O
   ON b.ObjectID = MX.ID and TableID = 108 and PrimaryDisplay= 1
   LEFT OUTER JOIN MediaMaster MM on MX.MediaMasterID = MM.MediaMasterID
   LEFT OUTER JOIN MediaRenditions MR on MM.PrimaryRendID = MR.RenditionID
-  LEFT OUTER JOIN MediaFiles MF on MR.PrimaryFileID = MF.FileID</script></scripts></listview></xml>
+  LEFT OUTER JOIN MediaFiles MF on MR.PrimaryFileID = MF.FileID
+  
+  INNER JOIN [tms]..ClassificationXRefs CXR ON b.ObjectID = CXR.ID and CXR.TableID = 108
+  INNER JOIN [tms]..Classifications CL ON CXR.ClassificationID = CL.ClassificationID
+  INNER JOIN ObjAccession d on d.objectID = a.ID</script></scripts></listview></xml>
